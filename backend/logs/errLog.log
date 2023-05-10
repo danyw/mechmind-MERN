@@ -1,0 +1,25 @@
+20230421	00:10:45	418e064d-ba05-4cfa-af52-baed55c61547	Error: Not allowed by CORS	OPTIONS	/	https://www.google.com
+20230421	00:10:45	86ca1b6e-bbbd-4fd0-a953-a09d275d5c47	Error: Not allowed by CORS	GET	/	https://www.google.com
+20230423	00:26:48	d1d1cb23-feab-40dc-92ec-090f496d248a	ValidationError: User validation failed: username: Cast to string failed for value "[ 'Dangny' ]" (type Array) at path "username"	POST	/users	undefined
+20230423	14:25:23	f03d286c-87e3-415f-927e-54c510c3a5a8	ValidationError: User validation failed: username: Cast to string failed for value "[ 'Danny' ]" (type Array) at path "username"	POST	/users	undefined
+20230423	16:28:46	53f9c856-3dcc-4959-b4ea-ce85ed6c3d90	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "Dan" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20230423	16:31:47	e4bdc3e4-f2d3-4c18-b23b-2d6a1b6cd62b	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "Dan" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20230423	16:46:12	5c422d6c-9cfc-49b7-b214-66b2606e631f	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "Love" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20230423	16:47:53	b412929e-56bd-4d61-bb8d-c19d04a6d5b4	ValidationError: Note validation failed: user: Path `user` is required.	POST	/notes	undefined
+20230423	17:52:51	535774cc-a3f0-468f-9fc1-ad40a9650061	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "Love" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20230423	17:56:37	4f9887b1-a51e-4405-bccc-d09c8a3701d1	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "Love" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20230423	17:59:07	43e52546-1169-422a-9461-233eee30a2d3	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "Love" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20230423	18:20:47	9e3a2ba2-84b1-44ed-8e03-0bdf9e01706a	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "aa" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20230423	18:46:41	ba1eb530-860a-40cd-9731-27bf5f40072a	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "Hate" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20230423	18:46:52	8b5392c0-b8b6-47bc-894d-81556eb70842	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "HatGe" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20230423	18:52:00	cb7c31a3-395c-4232-a494-426db2eccee4	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "Hate" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20230423	18:52:09	d618efdf-77bc-434f-990b-249430ad0c3c	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "Hatje" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20230423	18:52:27	af712be6-60d1-4b5e-8e4b-d64015a860af	ValidationError: Note validation failed: user: Cast to ObjectId failed for value "64456c9c9d01ab" (type string) at path "user" because of "BSONError"	POST	/notes	undefined
+20230423	19:05:24	c3342aa9-fc6c-4db4-9369-65c01e7bb44d	MongoServerError: E11000 duplicate key error collection: MechmindDB.notes index: ticket_1 dup key: { ticket: null }	POST	/notes	undefined
+20230423	19:05:46	3dc3493c-20c5-4042-a435-e0f20e09d5a4	MongoServerError: E11000 duplicate key error collection: MechmindDB.notes index: ticket_1 dup key: { ticket: null }	POST	/notes	undefined
+20230423	19:07:22	cb89888c-680d-44cc-b2f6-c8053e5869cf	MongoServerError: E11000 duplicate key error collection: MechmindDB.notes index: ticket_1 dup key: { ticket: null }	POST	/notes	undefined
+20230423	19:09:28	396d0abd-29b1-4005-af5a-0d2a29fa64a3	MongoServerError: E11000 duplicate key error collection: MechmindDB.notes index: ticket_1 dup key: { ticket: null }	POST	/notes	undefined
+20230423	19:11:01	2c97fbbe-565f-429f-bd74-f994e5e5fba8	MongoServerError: E11000 duplicate key error collection: MechmindDB.notes index: ticket_1 dup key: { ticket: null }	POST	/notes	undefined
+20230423	19:11:31	388ddad9-cbeb-4ea8-9aa2-d0e4b39fca6b	MongoServerError: E11000 duplicate key error collection: MechmindDB.notes index: ticket_1 dup key: { ticket: null }	POST	/notes	undefined
+20230509	20:28:43	984791c9-769d-4022-8f3f-cf84e8e5cd92	Error: secretOrPrivateKey must have a value	POST	/auth	http://localhost:3000
+20230509	20:28:52	dc24dbdd-3750-45cb-bfd0-614b980e3095	Error: secretOrPrivateKey must have a value	POST	/auth	http://localhost:3000
