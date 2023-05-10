@@ -16,14 +16,12 @@ const EditNoteForm = ({ note, users }) => {
 
   const [title, setTitle] = useState(note.title);
   const [text, setText] = useState(note.text);
-  const [numPlates, setNumPlates] = useState(note.numPlates);
   const [completed, setCompleted] = useState(note.completed);
   const [userId, setUserId] = useState(note.user);
 
   useEffect(() => {
     if (isSuccess || isDelSuccess) {
       setTitle("");
-      setNumPlates("");
       setText("");
       setUserId("");
       navigate("/dash/notes");
@@ -31,16 +29,15 @@ const EditNoteForm = ({ note, users }) => {
   }, [isSuccess, isDelSuccess, navigate]);
 
   const onTitleChanged = (e) => setTitle(e.target.value);
-  const onNumPlatesChanged = (e) => setNumPlates(e.target.value);
   const onTextChanged = (e) => setText(e.target.value);
   const onCompletedChanged = (e) => setCompleted((prev) => !prev);
   const onUserIdChanged = (e) => setUserId(e.target.value);
 
-  const canSave = [title, numPlates, text, userId].every(Boolean) && !isLoading;
+  const canSave = [title, text, userId].every(Boolean) && !isLoading;
 
   const onSaveNoteClicked = async (e) => {
     if (canSave) {
-      await updateNote({ id: note.id, user: userId, title, numPlates, text, completed });
+      await updateNote({ id: note.id, user: userId, title, text, completed });
     }
   };
 
@@ -76,7 +73,6 @@ const EditNoteForm = ({ note, users }) => {
 
   const errClass = isError || isDelError ? "errmsg" : "offscreen";
   const validTitleClass = !title ? "form__input--incomplete" : "";
-  const validNumPlatesClass = !numPlates ? "form__input--incomplete" : "";
   const validTextClass = !text ? "form__input--incomplete" : "";
 
   const errContent = (error?.data?.message || delerror?.data?.message) ?? "";
@@ -116,19 +112,7 @@ const EditNoteForm = ({ note, users }) => {
           value={title}
           onChange={onTitleChanged}
         />
-        <label className="form__label" htmlFor="note-numPlates">
-          Plates Num:
-        </label>
-        <input
-          className={`form__input ${validNumPlatesClass}`}
-          id="note-numPlates"
-          name="numPlates"
-          type="text"
-          autoComplete="off"
-          value={numPlates}
-          onChange={onNumPlatesChanged}
-        />
-
+        
         <label className="form__label" htmlFor="note-text">
           Text:
         </label>

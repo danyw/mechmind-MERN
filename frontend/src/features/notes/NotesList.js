@@ -57,9 +57,6 @@ const NotesList = () => {
             <th scope="col" className="table__th note__title">
               Title
             </th>
-            <th scope="col" className="table__th note__numPlates">
-              Plates Num
-            </th>
             <th scope="col" className="table__th note__username">
               Owner
             </th>

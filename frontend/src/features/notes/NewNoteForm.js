@@ -10,14 +10,12 @@ const NewNoteForm = ({ users }) => {
   const navigate = useNavigate();
 
   const [title, setTitle] = useState("");
-  const [numPlates, setNumPlates] = useState("");
   const [text, setText] = useState("");
   const [userId, setUserId] = useState(users[0].id);
 
   useEffect(() => {
     if (isSuccess) {
       setTitle("");
-      setNumPlates("");
       setText("");
       setUserId("");
       navigate("/dash/notes");
@@ -25,16 +23,15 @@ const NewNoteForm = ({ users }) => {
   }, [isSuccess, navigate]);
 
   const onTitleChanged = (e) => setTitle(e.target.value);
-  const onNumPlatesChanged = (e) => setNumPlates(e.target.value);
   const onTextChanged = (e) => setText(e.target.value);
   const onUserIdChanged = (e) => setUserId(e.target.value);
 
-  const canSave = [title, numPlates, text, userId].every(Boolean) && !isLoading;
+  const canSave = [title, text, userId].every(Boolean) && !isLoading;
 
   const onSaveNoteClicked = async (e) => {
     e.preventDefault();
     if (canSave) {
-      await addNewNote({ user: userId, title, numPlates, text });
+      await addNewNote({ user: userId, title, text });
     }
   };
 
@@ -49,7 +46,6 @@ const NewNoteForm = ({ users }) => {
 
   const errClass = isError ? "errmsg" : "offscreen";
   const validTitleClass = !title ? "form__input--incomplete" : "";
-  const validNumPlatesClass = !numPlates ? "form__input--incomplete" : "";
   const validTextClass = !text ? "form__input--incomplete" : "";
 
   const content = (
@@ -77,19 +73,6 @@ const NewNoteForm = ({ users }) => {
           value={title}
           onChange={onTitleChanged}
         />
-<label className="form__label" htmlFor="numPlates">
-          Plates Num:
-        </label>
-        <input
-          className={`form__input ${validNumPlatesClass}`}
-          id="numPlates"
-          name="numPlates"
-          type="text"
-          autoComplete="off"
-          value={numPlates}
-          onChange={onNumPlatesChanged}
-        />
-        
         <label className="form__label" htmlFor="text">
           Text:
         </label>

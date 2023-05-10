@@ -17,10 +17,20 @@ const Welcome = () => {
       <p>
         <Link to="/dash/notes">View Mechmind Notes</Link>
       </p>
-
       <p>
-        <Link to="/dash/users">View User Settings</Link>
+        <Link to="/dash/notes/new">Add New Mechmind Note</Link>
       </p>
+      {(isManager || isAdmin) && (
+        <p>
+          <Link to="/dash/users">View User Settings</Link>
+        </p>
+      )}
+
+      {(isManager || isAdmin) && (
+        <p>
+          <Link to="/dash/users/new">Add New User</Link>
+        </p>
+      )}
     </section>
   );
 

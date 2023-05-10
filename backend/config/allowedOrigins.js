@@ -1,7 +1,3 @@
-const allowedOrigins = [
-    'http://localhost:3000',
-    'https://www.mechmind.com',
-    'https://mechmind.com'
-]
+const allowedOrigins = ["http://localhost:3000", "https://www.mechmind.com", "https://mechmind.com"];
 
-module.exports = allowedOrigins
+module.exports = allowedOrigins;

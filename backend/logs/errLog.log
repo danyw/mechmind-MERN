@@ -23,3 +23,4 @@
 20230423	19:11:31	388ddad9-cbeb-4ea8-9aa2-d0e4b39fca6b	MongoServerError: E11000 duplicate key error collection: MechmindDB.notes index: ticket_1 dup key: { ticket: null }	POST	/notes	undefined
 20230509	20:28:43	984791c9-769d-4022-8f3f-cf84e8e5cd92	Error: secretOrPrivateKey must have a value	POST	/auth	http://localhost:3000
 20230509	20:28:52	dc24dbdd-3750-45cb-bfd0-614b980e3095	Error: secretOrPrivateKey must have a value	POST	/auth	http://localhost:3000
+20230510	20:09:12	eaf3f642-e079-4745-a71d-b2c5bdff4ea9	ValidationError: Note validation failed: numPlates: Path `numPlates` is required.	POST	/notes	http://localhost:3000

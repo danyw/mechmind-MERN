@@ -27,22 +27,22 @@ const getAllNotes = async (req, res) => {
 // @route   POST /notes
 // @access  Private
 const createNewNote = async (req, res) => {
-  const { user, title, numPlates, text } = req.body;
+  const { user, title, text } = req.body;
 
   // Confirm data
-  if (!user || !title || !numPlates || !text) {
-    return res.status(400).json({ message: "All fields are required" });
+  if (!user || !title || !text) {
+    return res.status(400).json({ message: 'All fields are required' });
   }
 
   // Check for duplicate title
   const duplicate = await Note.findOne({ title }).collation({ locale: 'en', strength: 2 }).lean().exec();
 
   if (duplicate) {
-    return res.status(409).json({ message: "Duplicate note title" });
+    return res.status(409).json({ message: 'Duplicate note title' });
   }
 
   // Create and store new note
-  const note = await Note.create({ user, title, numPlates, text });
+  const note = await Note.create({ user, title, text });
 
   if (note) {
     //created
@@ -56,10 +56,10 @@ const createNewNote = async (req, res) => {
 // @route   PATCH /notes
 // @access  Private
 const updateNote = async (req, res) => {
-  const { id, user, title, numPlates, text, completed } = req.body;
+  const { id, user, title, text, completed } = req.body;
 
   // Confirm data
-  if (!id || !user || !title || !numPlates || !text || typeof completed !== "boolean") {
+  if (!id || !user || !title || !text || typeof completed !== "boolean") {
     return res.status(400).json({ message: "All fields are required" });
   }
   // Does the note exist?
@@ -80,13 +80,12 @@ const updateNote = async (req, res) => {
 
   note.user = user;
   note.title = title;
-  note.numPlates = numPlates;
   note.text = text;
   note.completed = completed;
 
   const updatedNote = await note.save();
 
-  res.json({ message: `Note ${updatedNote.title} updated` });
+  res.json(`'${updatedNote.title}' updated`);
 };
 
 // @desc    Dalete a note
