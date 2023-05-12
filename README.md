@@ -3,6 +3,8 @@
 **MechMind Garage's internal ticket/note system is deployed at the following locations:**
 - [Mechmind](https://mechmind.onrender.com)
 - [Mechmind-API](https://mechmind-api.onrender.com)
+*It may be loading slowly as it's a free service.*
+
 
 *It may be loading slowly as it's a free service.*
 
