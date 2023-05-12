@@ -4,6 +4,9 @@
 - [Mechmind](https://mechmind.onrender.com)
 - [Mechmind-API](https://mechmind-api.onrender.com)
 
+*It may be loading slowly as it's a free service.*
+
+
 The system is built using the MERN stack (MongoDB, Express, React, and Node.js), and React/Redux. It facilitates the creation of repair notes by various types of users (e.g., employees, admins, managers), each with distinct permissions. Admins and managers can see all of the notes, create users, delete users, etc.
 
 ## Branches

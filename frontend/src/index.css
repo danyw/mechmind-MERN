@@ -67,7 +67,7 @@
 
 body {
   font-family: 'Nunito', sans-serif;
-  min-height: 100vh;
+  min-height: 100svh;
   background-color: var(--BGCOLOR);
   color: var(--COLOR);
   background-image: url('./img/background.jpg');
@@ -85,7 +85,7 @@ select {
 
 #root {
   /* React root div */
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-flow: column nowrap;
 }
