@@ -3,6 +3,7 @@
 **MechMind Garage's internal ticket/note system is deployed at the following locations:**
 - [Mechmind](https://mechmind.onrender.com)
 - [Mechmind-API](https://mechmind-api.onrender.com)
+
 *It may be loading slowly as it's a free service.*
 
 
@@ -63,3 +64,7 @@ NODE_ENV=development
 For further information, please refer to the *UserStories* file.
 
 **Note**: Replace your_mongodb_uri, your_access_token, and your_refresh_token with your actual MongoDB URI and tokens.
+
+## Screenshots
+
+![screenshots](screenshots.jpg)
